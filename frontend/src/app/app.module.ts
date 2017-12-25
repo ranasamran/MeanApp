@@ -1,18 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
+import {MatButtonModule, MatCardModule} from '@angular/material';
 
-
+import { ApiService } from './api.service';
 import { AppComponent } from './app.component';
+import { MessagesComponent } from './messages/messages.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MessagesComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,HttpModule, MatButtonModule, MatCardModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
